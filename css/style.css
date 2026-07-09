@@ -14,6 +14,10 @@ header {
     background-color: #0d6efd;
     color: white;
     padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
