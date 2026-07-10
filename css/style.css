@@ -42,7 +42,7 @@ main {
 section {
     margin-bottom: 40px;
 }
-#produk {
+    .product-container {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
@@ -97,4 +97,34 @@ footer {
     height: 180px;
     background-color: #dcdcdc;
     border-radius: 8px;
+}
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-image img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.about-text {
+    max-width: 700px;
+}
+
+
+.about-text p {
+    line-height: 1.8;
+}
+
+.about-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-text li {
+    margin-bottom: 10px;
+    font-size: 18px;
 }
