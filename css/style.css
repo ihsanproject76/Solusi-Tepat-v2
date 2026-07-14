@@ -222,3 +222,68 @@ footer {
 .hero-button:hover {
     background-color: #0b5ed7;
 }
+/* ===========================
+   Hero Buttons
+=========================== */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.hero-button,
+.hero-button-secondary {
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-button {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.hero-button:hover {
+    background-color: #0b5ed7;
+}
+
+.hero-button-secondary {
+    background-color: white;
+    color: #0d6efd;
+    border: 2px solid #0d6efd;
+}
+
+.hero-button-secondary:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+/* ===========================
+   Hero Layout
+=========================== */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 25px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
