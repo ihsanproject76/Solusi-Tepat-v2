@@ -143,7 +143,48 @@ footer {
     margin-bottom: 10px;
     font-size: 18px;
 }
+/* ===========================
+   About Premium
+=========================== */
 
+#tentang {
+    background-color: white;
+    margin: 40px 25px;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+#tentang h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    max-width: 420px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    font-size: 18px;
+}
+
+.about-text li {
+    font-size: 18px;
+}
 
 /* ===========================
    Responsive Design
@@ -411,4 +452,138 @@ footer {
 .feature-card p {
     line-height: 1.6;
     color: #555;
+}
+/* ===========================
+   CONTACT
+=========================== */
+
+#contact{
+    padding:80px 10%;
+    background:#f8f9fa;
+}
+
+#contact h2{
+    text-align:center;
+    font-size:36px;
+    color:#0d6efd;
+    margin-bottom:50px;
+}
+
+.contact-container{
+    display:flex;
+    gap:40px;
+    justify-content:center;
+    align-items:flex-start;
+    flex-wrap:wrap;
+}
+
+.contact-info,
+.contact-form{
+    flex:1;
+    min-width:320px;
+    background:#ffffff;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.contact-info h3,
+.contact-form h3{
+    margin-bottom:25px;
+    color:#222;
+}
+
+.info-item{
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.info-item span{
+    font-size:28px;
+}
+
+.info-item i{
+    font-size:26px;
+    color:#0d6efd;
+    width:30px;
+    text-align:center;
+}
+.info-item .fa-whatsapp{
+    color:#25D366;
+}
+
+.info-item p{
+    margin:0;
+    color:#555;
+    line-height:1.6;
+}
+
+.contact-form form{
+    display:flex;
+    flex-direction:column;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:15px;
+    margin-bottom:18px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+    transition:.3s;
+    outline:none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:#0d6efd;
+    box-shadow:0 0 10px rgba(13,110,253,.25);
+}
+
+.contact-form textarea{
+    resize:vertical;
+}
+
+.contact-form button{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#0d6efd;
+    color:#fff;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact-form button:hover{
+    background:#0b5ed7;
+    transform:translateY(-2px);
+}
+/* Tombol WhatsApp */
+
+.whatsapp-btn{
+    display:block;
+    text-align:center;
+    margin-top:30px;
+    padding:15px;
+    background:#25D366;
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.whatsapp-btn:hover{
+    background:#1ebe5d;
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(37,211,102,.3);
+}
+.contact-desc{
+    color:#666;
+    line-height:1.7;
+    margin:15px 0 30px;
 }
