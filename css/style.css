@@ -376,3 +376,39 @@ footer {
 .hero-image img:hover {
     transform: scale(1.05);
 }
+/* ===========================
+   Feature Section
+=========================== */
+
+.feature-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.feature-card {
+    background-color: white;
+    width: 300px;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.feature-card h3 {
+    color: #0d6efd;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    line-height: 1.6;
+    color: #555;
+}
