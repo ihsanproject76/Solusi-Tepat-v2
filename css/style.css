@@ -727,7 +727,7 @@ footer{
 
     cursor:pointer;
 
-    display:flex;
+     display: none;
 
     justify-content:center;
 
@@ -746,5 +746,27 @@ footer{
     background:#0b5ed7;
 
     transform:scale(1.1);
+
+}
+
+/* ========================= */
+/* Fade In Animation */
+/* ========================= */
+
+.fade-in{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:all .8s ease;
+
+}
+
+.fade-in.show{
+
+    opacity:1;
+
+    transform:translateY(0);
 
 }

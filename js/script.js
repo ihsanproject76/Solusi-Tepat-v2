@@ -29,3 +29,31 @@ backToTop.addEventListener("click", function () {
     });
 
 });
+
+// =========================
+// Fade In Animation
+// =========================
+
+const fadeElements = document.querySelectorAll(".fade-in");
+
+function showFadeElements() {
+
+    fadeElements.forEach(function (element) {
+
+        const elementTop = element.getBoundingClientRect().top;
+
+        const windowHeight = window.innerHeight;
+
+        if (elementTop < windowHeight - 100) {
+
+            element.classList.add("show");
+
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", showFadeElements);
+
+window.addEventListener("load", showFadeElements);
