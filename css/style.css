@@ -1215,3 +1215,14 @@ footer{
 
     transform:translateY(-2px);
 }
+
+/* ========================================
+   FADE IN ANIMATION
+======================================== */
+
+.fade-in{
+
+    opacity:1;
+
+    transform:none;
+}
