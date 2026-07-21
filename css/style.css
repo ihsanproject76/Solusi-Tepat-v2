@@ -43,6 +43,24 @@ nav a {
     margin-right: 15px;
     font-weight: bold;
 }
+/* ==========================
+   HAMBURGER MENU
+========================== */
+
+.menu-toggle{
+
+    display:none;
+    font-size:28px;
+    color:#ffffff;
+    cursor:pointer;
+
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
 
 main {
     padding: 25px;
@@ -356,6 +374,26 @@ text-align:center;
     .about-image img {
         width: 220px;
     }
+
+}
+#backToTop,
+.floating-whatsapp{
+
+    width:55px;
+    height:55px;
+    right:15px;
+
+}
+
+#backToTop{
+
+    bottom:85px;
+
+}
+
+.floating-whatsapp{
+
+    bottom:20px;
 
 }
 /* ===========================
@@ -993,6 +1031,56 @@ footer{
 
         flex-direction:column;
     }
+    /* ==========================
+   NAVBAR MOBILE
+========================== */
+
+header{
+
+    flex-wrap:wrap;
+
+}
+
+nav{
+
+    width:100%;
+    display:flex;
+    justify-content:flex-end;
+    position:relative;
+
+}
+
+.menu-toggle{
+
+    display:block;
+
+}
+
+.nav-links{
+
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:45px;
+    right:0;
+    background:#0d6efd;
+    width:220px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+.nav-links.active{
+
+    display:flex;
+
+}
+
+.nav-links a{
+
+    margin:10px 0;
+}
 
     .contact-info,
     .contact-form{
@@ -1225,4 +1313,89 @@ footer{
     opacity:1;
 
     transform:none;
+}
+
+/* ==========================
+   RESPONSIVE FOOTER
+========================== */
+
+@media (max-width:768px){
+
+    .footer-container{
+
+        grid-template-columns:1fr;
+        gap:35px;
+        text-align:center;
+
+    }
+
+    .footer-box{
+
+        width:100%;
+    }
+
+    .footer-box ul{
+
+        padding:0;
+    }
+
+    .footer-box ul li{
+
+        margin-bottom:12px;
+    }
+
+    .footer-box i{
+
+        margin-right:8px;
+    }
+
+}
+
+/* ==========================
+   MOBILE MENU
+========================== */
+
+.menu-toggle{
+    display:none;
+    font-size:30px;
+    color:#fff;
+    cursor:pointer;
+}
+
+@media (max-width:768px){
+
+    header{
+        padding:18px 20px;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:75px;
+        right:20px;
+        width:220px;
+
+        flex-direction:column;
+        background:#0d6efd;
+
+        border-radius:12px;
+        overflow:hidden;
+
+        box-shadow:0 10px 25px rgba(0,0,0,.2);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-links a{
+        width:100%;
+        padding:16px;
+        margin:0;
+        text-align:center;
+    }
 }
