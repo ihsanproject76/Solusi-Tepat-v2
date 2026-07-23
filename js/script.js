@@ -163,3 +163,17 @@ window.addEventListener("load", function () {
 window.addEventListener("scroll", showFadeElements);
 
 window.addEventListener("load", showFadeElements);
+
+// =========================
+// DARK MODE
+// =========================
+
+const themeToggle = document.getElementById("themeToggle");
+
+themeToggle.addEventListener("click", function () {
+
+    console.log("Dark Mode diklik");
+
+    document.body.classList.toggle("dark-mode");
+
+});
