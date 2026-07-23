@@ -122,19 +122,41 @@ window.addEventListener("scroll", function () {
             currentSection = section.getAttribute("id");
 
         }
-        navItems.forEach(function(item){
-
-    item.classList.remove("active");
-
-    if(item.dataset.section === currentSection){
-
-        item.classList.add("active");
-
-    }
-
-});
 
     });
+
+    navItems.forEach(function(item){
+
+        item.classList.remove("active");
+
+        if(item.dataset.section === currentSection){
+
+            item.classList.add("active");
+
+        }
+
+    });
+
+});
+// =========================
+// PRELOADER
+// =========================
+
+window.addEventListener("load", function () {
+
+    console.log("Website selesai dimuat");
+
+    const preloader = document.getElementById("preloader");
+
+    console.log(preloader);
+
+    setTimeout(function () {
+
+        console.log("Preloader disembunyikan");
+
+        preloader.classList.add("hide");
+
+    }, 2000);
 
 });
 
