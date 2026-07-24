@@ -170,10 +170,29 @@ window.addEventListener("load", showFadeElements);
 
 const themeToggle = document.getElementById("themeToggle");
 
+// Cek tema yang tersimpan
+if(localStorage.getItem("theme") === "dark"){
+
+    document.body.classList.add("dark-mode");
+
+}
+
+// Tombol Dark Mode
 themeToggle.addEventListener("click", function () {
 
     console.log("Dark Mode diklik");
 
     document.body.classList.toggle("dark-mode");
+
+    // Simpan pilihan pengguna
+    if(document.body.classList.contains("dark-mode")){
+
+        localStorage.setItem("theme","dark");
+
+    }else{
+
+        localStorage.setItem("theme","light");
+
+    }
 
 });
