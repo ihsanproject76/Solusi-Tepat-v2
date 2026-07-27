@@ -54,9 +54,23 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 </div>
 
     </nav>
+    <div class="header-actions">
+
+    <button id="cartButton" class="cart-button">
+
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        <span id="cartCount">0</span>
+
+    </button>
+
     <button id="themeToggle" class="theme-toggle">
-    <i class="fa-solid fa-moon"></i>
-</button>
+
+        <i class="fa-solid fa-moon"></i>
+
+    </button>
+
+</div>
 
 </header>
 
@@ -118,33 +132,39 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
     </div>
 
-    <div class="product-container">
-
-   <div class="product-card">
+    <div class="product-card">
 
     <span class="badge">Terlaris</span>
 
     <img src="images/produk1.jpg" alt="Produk Solusi Tepat">
 
     <h3>Produk Pertama</h3>
-    <div class="product-rating">
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
 
-    <span>5.0</span>
-</div>
+    <div class="product-rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+
+        <span>5.0</span>
+    </div>
 
     <p>Rp 25.000</p>
 
-    <a href="https://wa.me/6282187774071?text=Halo%20Solusi%20Tepat,%20saya%20ingin%20membeli%20Produk%20Pertama" target="_blank">
-        <button>Beli Sekarang</button>
+    <a href="https://wa.me/6282187774071?text=Halo%20Solusi%20Tepat,%20saya%20ingin%20membeli%20Produk%20Pertama"
+       target="_blank">
+
+        <button
+            class="add-cart"
+            data-name="Produk Pertama"
+            data-price="25000">
+            Beli Sekarang
+        </button>
+
     </a>
 
-
-    </div>
+</div>
  <div class="product-card">
 
         <img src="images/produk1.jpg" alt="Produk Solusi Tepat">
@@ -152,8 +172,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         <h3>Produk kedua</h3>
 
         <p>Rp 40.000</p>
+        <a href="https://wa.me/6282187774071?text=Halo%20Solusi%20Tepat,%20saya%20ingin%20membeli%20Produk%20Pertama"
+       target="_blank">
 
-        <button>Beli Sekarang</button>
+        <button
+class="add-cart"
+data-name="Produk Kedua"
+data-price="40000">
+Beli Sekarang
+</button>
 
     </div>
      <div class="product-card">
