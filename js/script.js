@@ -194,5 +194,33 @@ themeToggle.addEventListener("click", function () {
         localStorage.setItem("theme","light");
 
     }
+// =========================
+// SEARCH PRODUCT
+// =========================
 
+const searchInput = document.getElementById("searchInput");
+
+const productCards = document.querySelectorAll(".product-card");
+
+searchInput.addEventListener("input", function () {
+
+    const keyword = searchInput.value.toLowerCase();
+
+    productCards.forEach(function(card){
+
+        const productName = card.querySelector("h3").textContent.toLowerCase();
+
+        if(productName.includes(keyword)){
+
+            card.style.display = "block";
+
+        }else{
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+});
 });
