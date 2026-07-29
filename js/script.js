@@ -224,3 +224,25 @@ searchInput.addEventListener("input", function () {
 
 });
 });
+
+// =========================
+// SHOPPING CART
+// =========================
+
+let cartCount = 0;
+
+const cartCounter = document.getElementById("cartCount");
+
+const addCartButtons = document.querySelectorAll(".add-cart");
+
+addCartButtons.forEach(function(button){
+
+    button.addEventListener("click", function(){
+
+        cartCount++;
+
+        cartCounter.textContent = cartCount;
+
+    });
+
+});
