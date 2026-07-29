@@ -31,7 +31,24 @@ header {
     top: 0;
     z-index: 1000;
 }
+/* ==========================
+   LOGO
+========================== */
 
+.logo img{
+
+    height:100px;
+    width:auto;
+    display:block;
+
+    transition:transform .3s ease;
+}
+
+.logo img:hover{
+
+    transform:scale(1.05);
+
+}
 nav {
     margin-top: 10px;
 }
@@ -1571,76 +1588,6 @@ nav{
 
 }
 
-/* ===========================
-   CART BUTTON
-=========================== */
-
-.cart-button{
-
-    position:relative;
-
-    width:48px;
-
-    height:48px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:#ffffff;
-
-    color:#0d6efd;
-
-    cursor:pointer;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    font-size:20px;
-
-    transition:.3s;
-
-}
-
-.cart-button:hover{
-
-    transform:scale(1.1);
-
-    background:#eaf2ff;
-
-}
-#cartCount{
-
-    position:absolute;
-
-    top:-5px;
-
-    right:-5px;
-
-    width:22px;
-
-    height:22px;
-
-    border-radius:50%;
-
-    background:#ef4444;
-
-    color:#ffffff;
-
-    font-size:12px;
-
-    font-weight:bold;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-}
 
 /* ===========================
    THEME TOGGLE
