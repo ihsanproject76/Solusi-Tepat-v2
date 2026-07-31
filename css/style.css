@@ -35,19 +35,22 @@ header {
    LOGO
 ========================== */
 
-.logo img{
-
-    height:100px;
-    width:auto;
-    display:block;
-
-    transition:transform .3s ease;
+.logo{
+    display:flex;
+    align-items:center;
 }
 
-.logo img:hover{
-
+.logo img{
+    height:72px;
+    width:auto;
+    display:block;
+    transition:all .3s ease;
+}
+header.shrink .logo img{
+    height:56px;
+}
+.logo:hover img{
     transform:scale(1.05);
-
 }
 nav {
     margin-top: 10px;
@@ -894,10 +897,16 @@ footer{
 }
 
 .footer-box p{
-    color:#d1d5db;
-    line-height:1.8;
-}
 
+    color:#d1d5db;
+
+    line-height:1.8;
+
+    max-width:450px;
+
+    margin:15px auto;
+
+}
 .footer-box ul{
     list-style:none;
     padding:0;
@@ -909,14 +918,22 @@ footer{
 }
 
 .footer-box ul li a{
+
     text-decoration:none;
-    color:#d1d5db;
+    color:#ffffff;
+
     transition:.3s;
+
+    font-weight:500;
+
 }
 
 .footer-box ul li a:hover{
-    color:#0d6efd;
+
+    color:#4da3ff;
+
     padding-left:6px;
+
 }
 
 .footer-box i{
@@ -930,6 +947,15 @@ footer{
     padding:20px;
     color:#cccccc;
     font-size:15px;
+}
+.footer-logo{
+
+    width:90px;
+
+    border-radius:12px;
+
+    margin-bottom:15px;
+
 }
 /* ==========================================
    FLOATING WHATSAPP
@@ -1085,6 +1111,95 @@ footer{
 }
 
 /* ==========================
+   CALL TO ACTION
+========================== */
+
+.cta{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:80px auto;
+
+    padding:70px 30px;
+
+    text-align:center;
+
+    background:linear-gradient(135deg,#0d6efd,#2563eb);
+
+    border-radius:22px;
+
+    color:#ffffff;
+
+   box-shadow:
+0 20px 50px rgba(13,110,253,.25),
+0 0 30px rgba(13,110,253,.20);
+
+}
+
+.cta h2{
+
+    font-size:38px;
+
+    margin-bottom:20px;
+
+}
+
+.cta p{
+
+    max-width:700px;
+
+    margin:0 auto 35px;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:rgba(255,255,255,.92);
+
+}
+
+.cta-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:16px 34px;
+
+    background:#ffffff;
+
+    color:#0d6efd;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.cta-button:hover{
+
+    transform:translateY(-4px) scale(1.03);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+.cta-button i{
+
+    font-size:30px;
+
+    color:#25D366;
+
+}
+
+/* ==========================
    RESPONSIVE
 ========================== */
 
@@ -1099,9 +1214,22 @@ footer{
 ========================== */
 
 header{
+    background:#0d47a1;
+    padding:12px 35px;
 
-    flex-wrap:wrap;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.15);
+}
+header.shrink{
+    padding:8px 35px;
+    transition:all .3s ease;
 }
 
 nav{
@@ -1111,6 +1239,9 @@ nav{
     justify-content:flex-end;
     position:relative;
 
+}
+nav a:hover{
+    color:#ffd54f;
 }
 
 .menu-toggle{
@@ -1426,6 +1557,31 @@ nav{
 
         margin-right:8px;
     }
+    .cta{
+
+    padding:50px 20px;
+
+}
+
+.cta h2{
+
+    font-size:28px;
+
+}
+
+.cta p{
+
+    font-size:16px;
+
+}
+
+.cta-button{
+
+    width:100%;
+
+    justify-content:center;
+
+}
 
 }
 
@@ -1443,7 +1599,7 @@ nav{
 @media (max-width:768px){
 
     header{
-        padding:18px 20px;
+        padding:20px 20px;
     }
 
     .menu-toggle{

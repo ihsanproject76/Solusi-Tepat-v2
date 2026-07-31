@@ -224,25 +224,18 @@ searchInput.addEventListener("input", function () {
 
 });
 });
-
 // =========================
-// SHOPPING CART
+// SHRINK HEADER
 // =========================
 
-let cartCount = 0;
+const header = document.querySelector("header");
 
-const cartCounter = document.getElementById("cartCount");
+window.addEventListener("scroll", function () {
 
-const addCartButtons = document.querySelectorAll(".add-cart");
-
-addCartButtons.forEach(function(button){
-
-    button.addEventListener("click", function(){
-
-        cartCount++;
-
-        cartCounter.textContent = cartCount;
-
-    });
+    if (window.scrollY > 80) {
+        header.classList.add("shrink");
+    } else {
+        header.classList.remove("shrink");
+    }
 
 });
