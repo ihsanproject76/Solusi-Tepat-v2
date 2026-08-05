@@ -18,18 +18,23 @@ body{
     color: #333333;
 }
 
-header {
-    background-color: #0d6efd;
-    color: white;
-    padding: 20px;
+header{
+    background:#0d47a1;
+    padding:12px 35px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    position:sticky;
+    top:0;
+
+    width:100%;
+    box-sizing:border-box;
+
+    z-index:1000;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.15);
 }
 /* ==========================
    LOGO
@@ -280,13 +285,14 @@ footer {
 }
 
 .about-image{
-    flex:0 0 420px;
+    flex:0 0 520px;
 }
+
 .about-image img{
-    max-width:420px;
     width:100%;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    max-width:520px;
+    border-radius:18px;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
     transition:transform .4s ease, box-shadow .4s ease;
 }
 .about-image img:hover{
@@ -550,7 +556,7 @@ footer {
 
 .hero{
 
-    padding:75px 25px;
+    padding:50px 25px;
 
     background:linear-gradient(135deg,#eaf4ff,#ffffff);
 
@@ -581,37 +587,33 @@ footer {
 }
 
 
-.hero-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    padding:60px 20px;
-
-    background: linear-gradient(135deg, #eaf4ff, #ffffff);
-    position:relative;
-z-index:1;
+.hero-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+    padding:40px 20px;
 }
 
-.hero-text {
-    flex: 1;
+.hero-text{
+    flex:0 0 42%;
 }
 
-.hero-image {
-    flex: 1;
-    text-align: center;
+.hero-image{
+    flex:1.2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
-
-.hero-image img {
-    width: 100%;
-    max-width: 480px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-   transition: transform 0.4s ease;
+.hero-image img{
+    width:100%;
+    max-width:650px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
 }
 .hero-image img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 18px 35px rgba(0,0,0,0.25);
+    transform: scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,.25);
 }
 /* ===========================
    Hero Premium
@@ -2081,4 +2083,13 @@ body.dark-mode .info-item{
 
     margin-bottom:30px;
 
+}
+
+html,
+body{
+    overflow-x:hidden;
+}
+
+html{
+    scrollbar-gutter: stable;
 }
