@@ -170,7 +170,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         <span>5.0</span>
     </div>
 
-    <a href="https://wa.me/6285110563626?text=Halo%20Solusi%20Tepat,%20saya%20ingin%20membeli%20Produk%20ini(sebutkan produknya)"
+    <a href="https://wa.me/6285110563626?text=Halo%20Solusi%20Tepat%2C%20saya%20ingin%20membeli%20Produk%20Pertama"
        target="_blank">
 
       <button class="buy-button">
@@ -185,7 +185,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         <img src="images/produk1.jpg" alt="Produk Solusi Tepat">
 
         <h3>Produk kedua</h3>
-        <a href="https://wa.me/6285110563626?text=Halo%20Solusi%20Tepat,%20saya%20ingin%20membeli%20Produk%20ini(sebutkan produknya)"
+        <a href="https://wa.me/6285110563626?text=Halo%20Solusi%20Tepat%2C%20saya%20ingin%20membeli%20Produk%20Kedua"
        target="_blank">
 
        <button class="buy-button">
@@ -199,7 +199,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         <img src="images/produk1.jpg" alt="Produk Solusi Tepat">
 
         <h3>Produk ketiga</h3>
-        <a href="https://wa.me/6285110563626?text=Halo%20Solusi%20Tepat,%20saya%20ingin%20membeli%20Produk%20Ketiga"
+        <a href="https://wa.me/6285110563626?text=Halo%20Solusi%20Tepat%2C%20saya%20ingin%20membeli%20Produk%20Ketiga"
 target="_blank">
 
     <button class="buy-button">
@@ -207,6 +207,8 @@ target="_blank">
 </button>
 
 </a>
+    </div>
+
     </div>
 </section>
 
@@ -342,6 +344,8 @@ target="_blank">
 
 </div>
 
+    </div>
+
 </section>
     </main>
 
@@ -393,13 +397,13 @@ target="_blank">
 
             <h3>Kirim Pesan</h3>
 
-            <form>
+            <form id="contactForm">
 
-                <input type="text" placeholder="Nama Lengkap" required>
+                <input type="text" id="contactName" placeholder="Nama Lengkap" required>
 
-                <input type="email" placeholder="Alamat Email" required>
+                <input type="email" id="contactEmail" placeholder="Alamat Email" required>
 
-                <textarea rows="6" placeholder="Tulis pesan Anda..." required></textarea>
+                <textarea rows="6" id="contactMessage" placeholder="Tulis pesan Anda..." required></textarea>
 
                 <button type="submit">Kirim Pesan</button>
 
@@ -409,8 +413,6 @@ target="_blank">
 
     </div>
 
-</section>
-...
 </section>
 
 <!-- CTA -->
@@ -537,6 +539,8 @@ target="_blank">
 
 </div>
 
+    </div>
+
     <div class="footer-bottom">
 
        <p>
@@ -563,5 +567,30 @@ target="_blank">
 
 </button>
 <script src="js/script.js"></script>
+<script>
+    // Kirim isi form Kontak ke WhatsApp
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const nama = document.getElementById('contactName').value.trim();
+            const email = document.getElementById('contactEmail').value.trim();
+            const pesan = document.getElementById('contactMessage').value.trim();
+
+            const teks =
+                `Halo Solusi Tepat, saya ingin bertanya:\n` +
+                `Nama: ${nama}\n` +
+                `Email: ${email}\n` +
+                `Pesan: ${pesan}`;
+
+            const nomorWA = '6285110563626';
+            window.open(`https://wa.me/${nomorWA}?text=${encodeURIComponent(teks)}`, '_blank');
+
+            contactForm.reset();
+        });
+    }
+</script>
 
 </body>
+</html>
