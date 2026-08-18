@@ -644,17 +644,23 @@ footer {
 .hero-image{
     flex:1;
     display:flex;
-    justify-content:flex-end;
+    justify-content:center;
     align-items:center;
+    background:linear-gradient(135deg,#eaf4ff,#ffffff);
+    border-radius:24px;
+    padding:28px;
+    box-shadow:0 20px 45px rgba(13,110,253,0.12);
 }
 
 .hero-image img{
     width:100%;
-    max-width:none;
+    max-width:560px;
+    height:auto;
+    display:block;
+    transition:transform 0.3s ease;
 }
 .hero-image img:hover {
     transform: scale(1.03);
-    box-shadow: 0 20px 40px rgba(0,0,0,.25);
 }
 /* ===========================
    Hero Premium
@@ -2318,6 +2324,8 @@ html{
         display:flex;
         justify-content:center;
         align-items:center;
+        padding:16px;
+        border-radius:18px;
     }
 
     .hero-image img{
