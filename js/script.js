@@ -241,3 +241,42 @@ window.addEventListener("scroll", function () {
     }
 
 });
+
+// =========================
+// GALERI PRODUK 1
+// =========================
+
+function changeProduct1Image(thumbnail){
+
+    const mainImage = document.getElementById("product1MainImage");
+
+    if(!mainImage) return;
+
+    mainImage.src = thumbnail.src;
+
+    document.querySelectorAll(".gallery-thumb").forEach(function(item){
+        item.classList.remove("active");
+    });
+
+    thumbnail.classList.add("active");
+}
+// =========================
+// GALERI PRODUK 2
+// =========================
+
+function changeProduct2Image(thumbnail){
+
+    const mainImage = document.getElementById("product2MainImage");
+
+    if(!mainImage) return;
+
+    mainImage.src = thumbnail.src;
+
+    const gallery = thumbnail.closest(".product-card");
+
+    gallery.querySelectorAll(".gallery-thumb").forEach(function(item){
+        item.classList.remove("active");
+    });
+
+    thumbnail.classList.add("active");
+}

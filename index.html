@@ -152,23 +152,36 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
     <div class="product-container">
 
-    <div class="product-card">
+   <div class="product-card">
 
     <span class="badge">Terlaris</span>
 
-    <img src="images/produk1.jpg" alt="Produk Solusi Tepat">
-
-    <h3>Produk Pertama</h3>
-
-    <div class="product-rating">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-
-        <span>5.0</span>
+    <!-- Gambar utama Produk 1 -->
+    <div class="product-gallery-main">
+        <img
+            id="product1MainImage"
+            src="images/foto-produk mobil1.jpg"
+            alt="Pinjaman Kendaraan Solusi Tepat">
     </div>
+
+    <!-- Thumbnail Galeri -->
+    <div class="product-gallery-thumbs">
+
+        <img
+           src="images/foto-produk mobil1.jpg"
+            alt="Foto kendaraan"
+            class="gallery-thumb active"
+            onclick="changeProduct1Image(this)">
+
+        <img
+            src="images/produk1-angsuran.jpg"
+            alt="Simulasi angsuran"
+            class="gallery-thumb"
+            onclick="changeProduct1Image(this)">
+
+    </div>
+
+    <h3>Pinjaman Kendaraan</h3>
 
     <a href="https://wa.me/6285110563626?text=Halo%20Solusi%20Tepat%2C%20saya%20ingin%20membeli%20Produk%20Pertama"
        target="_blank">
@@ -180,10 +193,30 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     </a>
 
 </div>
- <div class="product-card">
+<div class="product-card">
+ <!-- Galeri Produk 2 -->
+<div class="product-gallery-main">
+    <img
+        id="product2MainImage"
+        src="images/foto-produk-motor.jpg"
+        alt="Pinjaman Kendaraan Motor Solusi Tepat">
+</div>
 
-        <img src="images/produk1.jpg" alt="Produk Solusi Tepat">
+<div class="product-gallery-thumbs">
 
+    <img
+        src="images/foto-produk-motor.jpg"
+        alt="Foto motor"
+        class="gallery-thumb active"
+        onclick="changeProduct2Image(this)">
+
+    <img
+        src="images/tabel-angsuran-motor.jpg"
+        alt="Simulasi angsuran motor"
+        class="gallery-thumb"
+        onclick="changeProduct2Image(this)">
+
+</div>
         <h3>Produk kedua</h3>
         <a href="https://wa.me/6285110563626?text=Halo%20Solusi%20Tepat%2C%20saya%20ingin%20membeli%20Produk%20Kedua"
        target="_blank">
