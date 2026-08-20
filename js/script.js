@@ -194,6 +194,9 @@ themeToggle.addEventListener("click", function () {
         localStorage.setItem("theme","light");
 
     }
+
+});
+
 // =========================
 // SEARCH PRODUCT
 // =========================
@@ -222,7 +225,6 @@ searchInput.addEventListener("input", function () {
 
     });
 
-});
 });
 // =========================
 // SHRINK HEADER
