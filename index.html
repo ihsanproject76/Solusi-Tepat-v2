@@ -2,622 +2,250 @@
 <html lang="id">
 
 <head>
- <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Solusi Tepat menyediakan pinjaman dengan jaminan BPKB mobil, BPKB motor, sertifikat rumah, dan dana pensiun. Hubungi kami melalui WhatsApp untuk informasi layanan dan konsultasi.">
+    <meta name="description" content="Solusi Tepat menyediakan layanan pinjaman resmi dengan jaminan BPKB dan pasokan distributor pangan/sembako grosir terpercaya untuk wilayah Jabodetabek.">
+    <meta name="author" content="Solusi Tepat">
+    <meta name="theme-color" content="#0d6efd">
+    
+    <meta property="og:title" content="Solusi Tepat | Layanan Finansial & Distributor Pangan">
+    <meta property="og:description" content="Solusi Tepat menyediakan layanan pinjaman resmi dengan jaminan BPKB dan pasokan distributor pangan/sembako grosir terpercaya untuk wilayah Jabodetabek.">
+    <meta property="og:image" content="images/logo.png">
+    <meta property="og:type" content="website">
 
-<meta name="author" content="Solusi Tepat">
-
-<meta name="theme-color" content="#0d6efd">
-<meta property="og:title" content="Solusi Tepat | Pinjaman BPKB Mobil & Motor">
-
-<meta property="og:description" content="Solusi Tepat menyediakan pinjaman dengan jaminan BPKB mobil, BPKB motor, sertifikat rumah, dan dana pensiun. Hubungi kami melalui WhatsApp untuk informasi layanan dan konsultasi.">
-<meta property="og:image" content="images/logo.png">
-
-<meta property="og:type" content="website">
-
-<title>Solusi Tepat | Pinjaman BPKB Mobil & Motor</title>
+    <title>Solusi Tepat | Layanan Finansial & Distributor Pangan</title>
     <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cloudflare.com">
+
+    <style>
+        /* CSS Tambahan Khusus Pengendali Sakelar Divisi Bisnis */
+        .divisi-switcher-bar {
+            background-color: #1e293b;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            padding: 12px 10px;
+            position: sticky;
+            top: 0;
+            z-index: 99999;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .switch-btn {
+            background: transparent;
+            color: #94a3b8;
+            border: 2px solid #334155;
+            padding: 10px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .switch-btn:hover {
+            color: #ffffff;
+            border-color: #64748b;
+        }
+
+        .switch-btn.active-finansial {
+            background-color: #0d6efd;
+            color: white;
+            border-color: #0d6efd;
+            box-shadow: 0 0 12px rgba(13, 110, 253, 0.4);
+        }
+
+        .switch-btn.active-pangan {
+            background-color: #e67e22;
+            color: white;
+            border-color: #e67e22;
+            box-shadow: 0 0 12px rgba(230, 126, 34, 0.4);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Penyesuaian header bawaan Anda agar berada di bawah Switcher Bar */
+        header {
+            position: sticky !important;
+            top: 64px !important; /* Menyesuaikan tinggi Switcher Bar */
+            z-index: 9998 !important;
+        }
+
+        /* Sektor Gaya CSS Khusus Halaman Distributor Pangan/Telur */
+        .pangan-body {
+            background-color: #f8f9fa;
+            color: #333333;
+            padding-bottom: 60px;
+        }
+
+        .pangan-hero {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            color: white;
+            padding: 60px 5%;
+            text-align: center;
+            position: relative;
+        }
+
+        .pangan-hero h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 12px; color: #ffffff; }
+        .pangan-hero p { font-size: 1.1rem; max-width: 650px; margin: 0 auto; opacity: 0.95; line-height: 1.6; }
+
+        .pangan-container {
+            max-width: 1140px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .pangan-container { grid-template-columns: 1fr; }
+            .pangan-hero h1 { font-size: 1.8rem; }
+        }
+
+        .pangan-card {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 30px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        body.dark-mode .pangan-card {
+            background: #22252a;
+            border-color: #333942;
+            color: #ffffff;
+        }
+
+        .pangan-card h2 {
+            font-size: 20px;
+            color: #1e293b;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 12px;
+        }
+        body.dark-mode .pangan-card h2 { color: #ffffff; border-bottom-color: #333942; }
+
+        .pangan-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .pangan-table th, .pangan-table td {
+            padding: 14px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 14px;
+        }
+        body.dark-mode .pangan-table th, body.dark-mode .pangan-table td { border-bottom-color: #333942; }
+
+        .pangan-table th { background-color: #f8f9fa; font-weight: 600; color: #1e293b; }
+        body.dark-mode .pangan-table th { background-color: #1a1d21; color: #ffffff; }
+
+        .calc-form-group { margin-bottom: 20px; }
+        .calc-form-group label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px; color: #1e293b; }
+        body.dark-mode .calc-form-group label { color: #ffffff; }
+        
+        .calc-form-group select, .calc-form-group input {
+            width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 14px; font-family: 'Poppins', sans-serif; outline: none;
+        }
+        body.dark-mode .calc-form-group select, body.dark-mode .calc-form-group input { background: #1a1d21; color: white; border-color: #333942; }
+
+        .pangan-calc-result {
+            background: #fffaf0;
+            border: 1px dashed #e67e22;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        body.dark-mode .pangan-calc-result { background: #2c251e; }
+
+        .pangan-calc-row { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 8px; }
+        .pangan-calc-total { border-top: 1px solid #e2e8f0; padding-top: 10px; margin-top: 10px; font-weight: 700; font-size: 17px; color: #e67e22; }
+        body.dark-mode .pangan-calc-total { border-top-color: #333942; }
+
+        .pangan-btn-wa {
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            background-color: #25d366; color: white; text-decoration: none;
+            padding: 14px; border-radius: 8px; font-weight: 600; font-size: 15px;
+            width: 100%; border: none; cursor: pointer; margin-top: 20px; transition: background 0.2s; font-family: 'Poppins', sans-serif;
+        }
+        .pangan-btn-wa:hover { background-color: #1ebd59; }
+
+        .pangan-info-grosir {
+            max-width: 1140px; margin: 10px auto 40px; padding: 0 20px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;
+        }
+        .info-grosir-item { background: white; padding: 25px; border-radius: 10px; border: 1px solid #e2e8f0; text-align: center; }
+        body.dark-mode .info-grosir-item { background: #22252a; border-color: #333942; color: white; }
+        .info-grosir-item i { color: #e67e22; font-size: 28px; margin-bottom: 12px; }
+        .info-grosir-item h3 { font-size: 16px; margin-bottom: 8px; font-weight: 600; }
+        .info-grosir-item p { font-size: 13px; color: #666666; margin: 0; line-height: 1.5; }
+        body.dark-mode .info-grosir-item p { color: #b0b3b8; }
+    </style>
 </head>
 
 <body>
-    <div id="preloader">
 
-    <div class="loader-content">
-
-        <h2>Solusi Tepat</h2>
-
-        <div class="loader">
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </div>
-
+    <!-- =================================================== -->
+    <!-- BAR SAKELAR ATAS (PORTAL STRATEGIS #PALUGADA)       -->
+    <!-- =================================================== -->
+    <div class="divisi-switcher-bar">
+        <button id="btnFinansial" class="switch-btn active-finansial" onclick="bukaDivisi('finansial')">
+            <i class="fa-solid fa-hand-holding-dollar"></i> Layanan Jaminan BPKB
+        </button>
+        <button id="btnPangan" class="switch-btn" onclick="bukaDivisi('pangan')">
+            <i class="fa-solid fa-egg"></i> Distributor Pangan & Telur
+        </button>
     </div>
 
-</div>
-
-    <header>
-
-    <a href="#home" class="logo">
-    <img src="images/logo.png" alt="Logo Solusi Tepat">
-</a>
-
-    <nav>
-
-        <div class="menu-toggle" id="menuToggle">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-<div class="nav-links" id="navLinks">
-
-   <a href="#home" data-section="home">Beranda</a>
-
-<a href="#produk" data-section="produk">Produk</a>
-
-<a href="#layanan" data-section="layanan">Layanan</a>
-
-<a href="#tentang" data-section="tentang">Tentang</a>
-
-<a href="#contact" data-section="contact">Kontak</a>
-
-</div>
-
-    </nav>
-    <div class="header-actions">
-
-    <button id="themeToggle" class="theme-toggle">
-
-        <i class="fa-solid fa-moon"></i>
-
-    </button>
-
-</div>
-</header>
-
-
-    <main>
-
-  <!-- ==========================
-                 HERO
-    ========================== -->
-
-<section id="home" class="hero fade-in">
-        <div class="hero-decoration hero-decoration-1"></div>
-
-    <div class="hero-decoration hero-decoration-2"></div>
-
-
-    <div class="hero-content">
-
-        <div class="hero-text">
-
-            <h1>Selamat Datang di Solusi Tepat</h1>
-
-            <p>
-                Temukan berbagai kebutuhan terbaik dengan harga terjangkau,
-                kualitas terpercaya, dan pelayanan yang ramah.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#produk" class="hero-button">
-                    Lihat Produk
-                </a>
-
-                <a href="#contact" class="hero-button-secondary">
-                Hubungi Kami
-                </a>
-
+    <!-- =================================================== -->
+    <!-- TAB 1: KONTEN LINI BISNIS FINANSIAL (BAWAAN ASLI)    -->
+    <!-- =================================================== -->
+    <div id="kontenFinansial" class="tab-content active">
+        
+        <!-- Preloader Bawaan -->
+        <div id="preloader">
+            <div class="loader-content">
+                <h2>Solusi Tepat</h2>
+                <div class="loader">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-
         </div>
 
-        <div class="hero-image">
-    <img src="images/hero-illustration.png" alt="Ilustrasi layanan finansial Solusi Tepat">
-</div>
-
-    </div>
-
-</section>
-<!-- ==========================
-             PRODUK
-    ========================== -->
-
-<section id="produk">
-
-    <h2>Produk Kami</h2>
-
-    <div class="search-box">
-
-        <i class="fa-solid fa-magnifying-glass"></i>
-
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Cari produk...">
-
-    </div>
-
-    <div class="product-container">
-
-   <div class="product-card">
-
-    <span class="badge">Terlaris</span>
-
-    <!-- Gambar utama Produk 1 -->
-    <div class="product-gallery-main">
-        <img
-            id="product1MainImage"
-            src="images/foto-produk mobil1.jpg"
-            alt="Pinjaman Kendaraan Solusi Tepat">
-    </div>
-
-    <!-- Thumbnail Galeri -->
-    <div class="product-gallery-thumbs">
-
-        <img
-           src="images/foto-produk mobil1.jpg"
-            alt="Foto kendaraan"
-            class="gallery-thumb active"
-            onclick="changeProduct1Image(this)">
-
-        <img
-            src="images/produk1-angsuran.jpg"
-            alt="Simulasi angsuran"
-            class="gallery-thumb"
-            onclick="changeProduct1Image(this)">
-
-    </div>
-
-    <h3>Pinjaman dengan Jaminan BPKB Mobil</h3>
-
-    <a href="https://wa.me/6285110563626?text=Halo%20Solusi%20Tepat%2C%20saya%20ingin%20membeli%20Produk%20Pertama"
-       target="_blank">
-
-      <button class="buy-button">
-    Hubungi Sekarang
-</button>
-
-    </a>
-
-</div>
-<div class="product-card">
- <!-- Galeri Produk 2 -->
-<div class="product-gallery-main">
-    <img
-        id="product2MainImage"
-        src="images/foto-produk-motor.jpg"
-        alt="Pinjaman Kendaraan Motor Solusi Tepat">
-</div>
-
-<div class="product-gallery-thumbs">
-
-    <img
-        src="images/foto-produk-motor.jpg"
-        alt="Foto motor"
-        class="gallery-thumb active"
-        onclick="changeProduct2Image(this)">
-
-    <img
-        src="images/tabel-angsuran-motor.jpg"
-        alt="Simulasi angsuran motor"
-        class="gallery-thumb"
-        onclick="changeProduct2Image(this)">
-
-</div>
-        <h3>Pinjaman dengan Jaminan BPKB Motor</h3>
-        <a href="https://wa.me/6285110563626?text=Halo%20Solusi%20Tepat%2C%20saya%20ingin%20membeli%20Produk%20Kedua"
-       target="_blank">
-
-       <button class="buy-button">
-    Hubungi Sekarang
-</button>
-        </a>
-
-    </div>
-     <div class="product-card">
-
-        <img src="images/produk1.jpg" alt="Produk Solusi Tepat">
-
-        <h3>Produk ketiga</h3>
-        <a href="https://wa.me/6285110563626?text=Halo%20Solusi%20Tepat%2C%20saya%20ingin%20membeli%20Produk%20Ketiga"
-target="_blank">
-
-    <button class="buy-button">
-    Beli Sekarang
-</button>
-
-</a>
-    </div>
-
-    </div>
-</section>
-
-<!-- ==========================
-             KEUNGGULAN
-    ========================== -->
-
-<section id="keunggulan">
-
-    <h2 class="section-title fade-in">
-        Mengapa Memilih Solusi Tepat?
-    </h2>
-
-    <div class="feature-container">
-
-        <div class="feature-card">
-            <h3>🛡️ Proses Aman</h3>
-            <p>
-                Setiap proses dilakukan secara jelas,
-                aman, dan mengutamakan kepercayaan pelanggan.
-            </p>
-        </div>
-
-        <div class="feature-card">
-            <h3>⚡ Respon Cepat</h3>
-            <p>
-                Tim kami siap memberikan respon dan
-                pendampingan secepat mungkin sesuai kebutuhan Anda.
-            </p>
-        </div>
-
-        <div class="feature-card">
-            <h3>💬 Konsultasi Gratis</h3>
-            <p>
-                Konsultasikan kebutuhan Anda terlebih dahulu
-                tanpa biaya sebelum mengambil keputusan.
-            </p>
-        </div>
-
-        <div class="feature-card">
-            <h3>🤝 Pelayanan Ramah</h3>
-            <p>
-                Kami mengutamakan pelayanan yang profesional,
-                ramah, dan berorientasi pada kepuasan pelanggan.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ==========================
-             LAYANAN
-    ========================== -->
-
-<section id="layanan">
-
-    <h2>Layanan Kami</h2>
-
-    <div class="service-container">
-
-        <div class="service-card">
-
-            <i class="fa-solid fa-hand-holding-dollar"></i>
-
-            <h3>Pinjaman dengan Agunan</h3>
-
-            <p>
-                Kami melayani konsultasi pinjaman dengan agunan sesuai syarat dan ketentuan yang berlaku. Hubungi kami melalui WhatsApp untuk informasi lebih lanjut.
-            </p>
-
-            <a href="https://wa.me/6285110563626" target="_blank" class="hero-button">
-                Konsultasi Sekarang
+        <!-- Header / Navbar Bawaan -->
+        <header>
+            <a href="#home" class="logo">
+                <img src="images/logo.png" alt="Logo Solusi Tepat">
             </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-    <!-- ==========================
-             TENTANG KAMI
-    ========================== -->
-
-<section id="tentang">
-
-    <h2>Tentang Kami</h2>
-
-    <div class="about-container">
-
-<div class="about-text">
-
-    <p class="about-story">
-        Solusi Tepat hadir sebagai layanan jual-beli dan pinjaman dengan agunan
-        yang mudah diakses langsung lewat WhatsApp. Kami membangun Solusi Tepat
-        dengan komitmen mengutamakan kejelasan proses dan kenyamanan pelanggan
-        sejak awal — setiap pertanyaan dan transaksi kami tangani secara personal,
-        bukan lewat sistem otomatis yang kaku.
-    </p>
-
-    <div class="about-features">
-
-       <div class="about-feature-card">
-            <div class="feature-icon">📍</div>
-            <div class="feature-info">
-                <h3>Wilayah Layanan</h3>
-                <p>Saat ini kami fokus melayani wilayah JABODETABEK (Jakarta, Bogor, Depok, Tangerang, Bekasi).</p>
-            </div>
-        </div>
-
-        <div class="about-feature-card">
-            <div class="feature-icon">💬</div>
-            <div class="feature-info">
-                <h3>Cara Kerja Kami</h3>
-                <p>Semua konsultasi dan transaksi dilakukan langsung lewat WhatsApp, tanpa proses berbelit — kamu ngobrol langsung dengan tim kami, bukan chatbot.</p>
-            </div>
-        </div>
-
-        <div class="about-feature-card">
-            <div class="feature-icon">🌱</div>
-            <div class="feature-info">
-                <h3>Komitmen Kami</h3>
-                <p>Sebagai layanan yang terus berkembang, kami serius menjaga kepercayaan setiap pelanggan lewat transparansi biaya dan proses sejak transaksi pertama.</p>
-            </div>
-        </div>
-
-    </div>
-
-</div>
-
-    </div>
-
-</section>
-    </main>
-
- <!-- ==========================
-             CONTACT
-    ========================== -->
-
-    <section id="contact" class="fade-in">
-
-    <h2>Hubungi Kami</h2>
-
-    <div class="contact-container">
-
-        <!-- Informasi Kontak -->
-        <div class="contact-info">
-
-            <h3>Informasi Kontak</h3>
-            <p class="contact-desc">
-            Kami siap membantu Anda. Jangan ragu menghubungi kami jika memiliki pertanyaan mengenai produk atau pemesanan.
-            </p>
-            <div class="info-text">
-            <h4>WhatsApp</h4>
-        <span>085110563626</span>
-        </div>
-
-            <div class="info-item">
-           <span><i class="fa-solid fa-envelope-open"></i></span>
-                <p>Email<br><strong>ihsanproject76@gmail.com</strong></p>
-            </div>
-
-            <div class="info-item">
-                <span><i class="fa-solid fa-map-marker-alt"></i></span>
-                <p>Alamat<br><strong>Indonesia</strong></p>
-            </div>
-
-            <div class="info-item">
-                <span><i class="fa-solid fa-clock"></i></span>
-                <p>Jam Operasional<br><strong>Senin - Sabtu (08.00 - 17.00)</strong></p>
-            </div>
-
-        <a href="https://wa.me/6285110563626" target="_blank" class="whatsapp-btn">
-    <i class="fa-brands fa-whatsapp"></i> Chat via WhatsApp
-</a>
-</div>
-
-
-        <!-- Form Kontak -->
-        <div class="contact-form">
-
-            <h3>Kirim Pesan</h3>
-
-            <form id="contactForm">
-
-                <input type="text" id="contactName" placeholder="Nama Lengkap" required>
-
-                <input type="email" id="contactEmail" placeholder="Alamat Email" required>
-
-                <textarea rows="6" id="contactMessage" placeholder="Tulis pesan Anda..." required></textarea>
-
-                <button type="submit">Kirim Pesan</button>
-
-            </form>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- CTA -->
-<section class="cta fade-in">
-
-    <h2>Siap Mengajukan Pinjaman atau Membeli Produk?</h2>
-
-    <p>
-        Hubungi tim Solusi Tepat sekarang juga.
-        Kami siap membantu dengan pelayanan cepat,
-        aman, dan terpercaya.
-    </p>
-
-    <a href="https://wa.me/6285110563626"
-       class="cta-button"
-       target="_blank">
-
-        <i class="fa-brands fa-whatsapp"></i>
-        Hubungi via WhatsApp
-
-    </a>
-
-</section>
-
-
- <!-- ==========================
-             FOOTER
-    ========================== -->
- <footer class="fade-in">
-
-    <div class="footer-container">
-
-        <!-- Kolom 1 -->
-        <div class="footer-box">
-
-            <img src="images/logo-footer.png" alt="Logo Solusi Tepat" class="footer-logo">
-
-            <h3>Solusi Tepat</h3>
-
-            <p>
-                Solusi Tepat adalah toko online yang menyediakan berbagai kebutuhan
-                dengan harga terbaik, kualitas terpercaya, dan pelayanan yang ramah.
-            </p>
-
-        </div>
-
-        <!-- Kolom 2 -->
-        <div class="footer-box">
-
-            <h3>Menu Cepat</h3>
-
-<ul>
-
-    <li>
-        <i class="fa-solid fa-house"></i>
-        <a href="#home">Beranda</a>
-    </li>
-
-    <li>
-        <i class="fa-solid fa-box"></i>
-        <a href="#produk">Produk</a>
-    </li>
-
-    <li>
-        <i class="fa-solid fa-circle-info"></i>
-        <a href="#tentang">Tentang</a>
-    </li>
-
-    <li>
-        <i class="fa-solid fa-phone"></i>
-        <a href="#contact">Kontak</a>
-    </li>
-
-</ul>
-</div>
-       <!-- Kolom 3 -->
-<div class="footer-box">
-
-    <h3>Hubungi Kami</h3>
-
-    <p>
-        <i class="fa-brands fa-whatsapp"></i>
-        0851-1056-3626
-    </p>
-
-    <p>
-        <i class="fa-solid fa-envelope"></i>
-        ihsanproject76@gmail.com
-    </p>
-
-    <p>
-        <i class="fa-solid fa-location-dot"></i>
-        Indonesia
-    </p>
-
-    <br>
-
-    <h3>Media Sosial</h3>
-
-    <ul>
-
-        <li>
-            <a href="#">
-                <i class="fa-brands fa-facebook"></i>
-                Facebook
-            </a>
-        </li>
-
-        <li>
-            <a href="#">
-                <i class="fa-brands fa-instagram"></i>
-                Instagram
-            </a>
-        </li>
-
-        <li>
-            <a href="#">
-                <i class="fa-brands fa-tiktok"></i>
-                TikTok
-            </a>
-        </li>
-
-    </ul>
-
-</div>
-
-    </div>
-
-    <div class="footer-bottom">
-
-       <p>
-    &copy; 2026 Solusi Tepat Dilindungi• Dibuat di Indonesia
-</p>
-
-    </div>
-
-</footer>
-<!-- Floating WhatsApp -->
-<a href="https://wa.me/6285110563626"
-   class="floating-whatsapp"
-   target="_blank"
-   aria-label="Chat WhatsApp">
-
-    <i class="fa-brands fa-whatsapp"></i>
-
-</a>
-<!-- Back To Top -->
-
-<button id="backToTop">
-
-    <i class="fa-solid fa-arrow-up"></i>
-
-</button>
-<script src="js/script.js"></script>
-<script>
-    // Kirim isi form Kontak ke WhatsApp
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            const nama = document.getElementById('contactName').value.trim();
-            const email = document.getElementById('contactEmail').value.trim();
-            const pesan = document.getElementById('contactMessage').value.trim();
-
-            const teks =
-                `Halo Solusi Tepat, saya ingin bertanya:\n` +
-                `Nama: ${nama}\n` +
-                `Email: ${email}\n` +
-                `Pesan: ${pesan}`;
-
-            const nomorWA = '6285110563626';
-            window.open(`https://wa.me/${nomorWA}?text=${encodeURIComponent(teks)}`, '_blank');
-
-            contactForm.reset();
-        });
-    }
-</script>
-
-</body>
-</html>
+            <nav>
+                <div class="menu-toggle" id="menuToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <a href="#home" data-section="home">Beranda</a>
+                    <a href="#produk" data-section="produk">Produk</a>
+                    <a href="#layanan" data-section="layanan">Layanan</a>
+                    <a href="#tentang" data-section="tentang">Tentang</a>
